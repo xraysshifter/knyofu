@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from faker import Faker # ← not sure
 import random, os, sys
 
-sys.path.insert(0, '/home/nansp/knyofuv2/scripting')
+sys.path.insert(0, '/home/nansp/knyofu/scripting')
 
 from mmntb import Mmntb
 
@@ -36,7 +36,9 @@ def mmntbm():
             opinion_cons = mmntb.opinion_cons(opinion) 
         elif opinion == 'good':
             opinion_cons = mmntb.opinion_cons(opinion)
-
+    elif status == 'enemy':
+        statrelinfo = mmntb.act_with_status(status)
+        
     else:
         statrelinfo=mmntb.act_with_status(status)
         family_situation = ''

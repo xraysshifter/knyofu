@@ -20,7 +20,7 @@ class Mmntb:
         self.name = self.f.name_nonbinary()
         self.address = self.f.address()
         self.random_w = random.choice(wordlist)
-        self.serial_n = self.random_w.encode('iso_ir_226')
+        self.serial_n = str(self.random_w.encode('sha1'))
 #ibm1125
         idList=[self.name, self.address, self.serial_n]
 
@@ -79,16 +79,10 @@ class Mmntb:
         return self.cons
 
     def pent(self):
-        self.corridor = random.choice(corridors)
-        self.level = str(random.randint(1, 25))
-        self.penitentiary = random.choice(penitentiaries)
-        self.current_loc = self.level + ', ' + self.corridor
-        self.room_number = random.randint(50, 999)
+        self.current_loc = random.choice(penitentiaries) + str(random.randint(1, 20)) + random.choice(corridor), str(random.randint(50, 999))
         self.reason = random.choice(exile_reasons)
 
-        print(self.current_loc)
-
-        return self.penitentiary, self.current_loc, self.reason, self.room_number
+        return self.penit, self.reason
 
     def enemy(self):
         self.witnessed = random.choice(witnessed)

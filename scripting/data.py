@@ -4,8 +4,8 @@ exile_reasons = ['attempt to member\'s life', 'terrorism', 'denied any form of o
 #functional
 function_department = ['law enforcement system (LES)', 'identity server maintenance (ISM)', 'kidnapping service department (KSD)', 'effective power forces (EPF)', 'neutral agent', 'suspicion system (SS)', 'information retrieval system (IRS)']
 
-family_situation = ['married', 'alone with 2 functional children', 'alone with a functional adolescent', 'married with 2 functional children',' married with an unusable child', 'outnumbered family', 'alone', 'alone with a functional child', ]
-opinion = ['likely to stay', 'good', 'unconvenient', 'unable']
+family_situation = ['married', 'alone with 2 functional children', 'alone with a functional adolescent', 'married with 2 functional children',' married with an unexploitable child', 'outnumbered family', 'alone', 'alone with a functional child']
+opinion = ['likely to stay', 'good', 'unconvenient', 'unexploitable']
 
 #unkown
 
@@ -38,7 +38,8 @@ penitentiaries = [
     "Reeducation Center for Opposition Eradication"
 ]
 
+corridors = ['L1', 'L2', 'L3', 'L4', 'R1', 'R2', 'R3', 'R4']
 
 #enemy
-witnessed = ['disobeying', 'not working', 'rebelling', 'destroying public matter', 'insulting gov.', 'disrespecting several laws']
+witnessed = ['disobeying', 'not working for 2 days in a month', 'rebelling against values', 'destroying public matter for political reasons', 'insulting gov.', 'non-compliance with several laws']
 
