@@ -2,13 +2,14 @@ from faker import Faker
 import random, nltk
 from data import *
 from nltk.corpus import words
-
+from faker import config
 
 class Mmntb:
 
     def __init__(self):
         #faker initialization:
-        self.f=Faker(['it_IT', 'en_US', 'ja_JP', 'fr_FR'])
+        avail_locales = config.AVAILABLE_LOCALES
+        self.f=Faker(avail_locales)
         self.ex_reas = random.choice(exile_reasons)
         print(self.ex_reas)
         
@@ -19,9 +20,7 @@ class Mmntb:
         wordlist=words.words()
         self.name = self.f.name_nonbinary()
         self.address = self.f.address()
-        self.random_w = random.choice(wordlist)
-        self.serial_n = self.random_w.encode('iso_ir_226')
-#ibm1125
+        self.serial_n = self.f.sha1() 
         idList=[self.name, self.address, self.serial_n]
 
         return idList
@@ -83,6 +82,7 @@ class Mmntb:
         self.level = str(random.randint(1, 25))
         self.penitentiary = random.choice(penitentiaries)
         self.current_loc = self.level + ', ' + self.corridor
+        print(self.current_loc)
         self.room_number = random.randint(50, 999)
         self.reason = random.choice(exile_reasons)
 
@@ -94,11 +94,4 @@ class Mmntb:
         self.witnessed = random.choice(witnessed)
         self.last_seen = self.f.past_date()
 
-        return self.witnessed, self.last_seen
-
-
-
-
-    
-
-    
+        return self.witnessed, self.last_seen 

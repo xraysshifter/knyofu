@@ -38,7 +38,10 @@ def mmntbm():
             opinion_cons = mmntb.opinion_cons(opinion)
     elif status == 'enemy':
         statrelinfo = mmntb.act_with_status(status)
-        
+        family_situation = ""
+        opinion = ""
+        opinion_cons = ""
+
     else:
         statrelinfo=mmntb.act_with_status(status)
         family_situation = ''
